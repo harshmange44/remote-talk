@@ -222,7 +222,7 @@ socket.on('user count', count => {
 })
 
 socket.on('update user list', userList => {
-    usernameList = []
+    let usernameList = []
 
     userList.map(user => {
         usernameList.push(cName[user]);
