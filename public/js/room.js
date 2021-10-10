@@ -231,6 +231,7 @@ function handleGetUserMediaError(e) {
             break;
         case "SecurityError":
         case "PermissionDeniedError":
+            alert("Permission denied to access your camera and/or microphone");
             break;
         default:
             alert("Error opening your camera and/or microphone: " + e.message);
@@ -247,6 +248,7 @@ function reportError(e) {
 
 
 function startCall() {
+    console.log("LOGS: 267 : startCall func called");
 
     navigator.mediaDevices.getUserMedia(mediaConstraints)
         .then(localStream => {
@@ -262,6 +264,9 @@ function startCall() {
                         videoTrackSent[key] = track;
                 }
             })
+
+            console.log("LOGS: 267 : startCall : connections: "+connections);
+            console.log("LOGS: 267 : startCall : audioTrackSent: "+audioTrackSent);
 
         })
         .catch(handleGetUserMediaError);
