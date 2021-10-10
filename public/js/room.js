@@ -224,10 +224,10 @@ socket.on('user count', count => {
 socket.on('update user list', userList => {
     usernameList = []
 
-    userList.forEach(function(user){
+    [userList].map(user => {
         usernameList.push(cName[user]);
     })
-    console.log("LOGS: 224: user list: " + JSON.stringify(usernameList));
+    console.log("LOGS: 224: user list: " + usernameList);
 })
 
 let peerConnection;
