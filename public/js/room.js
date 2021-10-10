@@ -265,8 +265,8 @@ function startCall() {
                 }
             })
 
-            console.log("LOGS: 267 : startCall : connections: "+connections);
-            console.log("LOGS: 267 : startCall : audioTrackSent: "+audioTrackSent);
+            console.log("LOGS: 267 : startCall : connections: "+JSON.stringify(connections));
+            console.log("LOGS: 267 : startCall : audioTrackSent: "+JSON.stringify(audioTrackSent));
 
         })
         .catch(handleGetUserMediaError);
