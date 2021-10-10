@@ -42,6 +42,7 @@ io.on('connect', socket => {
         }
 
         io.to(roomid).emit('user count', rooms[roomid].length);
+        io.to(roomid).emit('update user list', rooms[roomid]);
 
     });
 

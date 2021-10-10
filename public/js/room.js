@@ -221,6 +221,10 @@ socket.on('user count', count => {
     }
 })
 
+socket.on('update user list', userList => {
+    console.log("LOGS: 224: user list: " + JSON.stringify(userList));
+})
+
 let peerConnection;
 
 function handleGetUserMediaError(e) {
