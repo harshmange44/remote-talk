@@ -276,11 +276,16 @@ function startCall() {
 
 function handleVideoOffer(offer, sid, cname, micinf, vidinf) {
 
+    console.log("LOGS: 277 : handleVideoOffer : offer: "+JSON.stringify(offer) + " : sid: "+JSON.stringify(sid));
+    
     cName[sid] = cname;
     console.log('video offered recevied');
     micInfo[sid] = micinf;
     videoInfo[sid] = vidinf;
     connections[sid] = new RTCPeerConnection(configuration);
+
+    console.log("LOGS: 277 : handleVideoOffer : cName: "+JSON.stringify(cName) + " : micInfo: "+JSON.stringify(micInfo)
+    + " : videoInfo: "+JSON.stringify(videoInfo) + " : connections: "+JSON.stringify(connections));
 
     connections[sid].onicecandidate = function (event) {
         if (event.candidate) {
@@ -347,6 +352,9 @@ function handleVideoOffer(offer, sid, cname, micinf, vidinf) {
 
         connections[sid].createOffer()
             .then(function (offer) {
+
+                console.log("LOGS: 277 : handleVideoOffer : onnegotiationneeded : createOffer : offer: "+JSON.stringify(offer));
+
                 return connections[sid].setLocalDescription(offer);
             })
             .then(function () {
@@ -386,6 +394,9 @@ function handleVideoOffer(offer, sid, cname, micinf, vidinf) {
             return connections[sid].setLocalDescription(answer);
         })
         .then(() => {
+            console.log("LOGS: 277 : handleVideoOffer : setRemoteDesc : desc: "+JSON.stringify(desc) + " : connections: "+ JSON.stringify(connections)
+            + " : audioTrackSent: "+ JSON.stringify(audioTrackSent) + " : videoTrackSent: "+ JSON.stringify(videoTrackSent));
+
             socket.emit('video-answer', connections[sid].localDescription, sid);
         })
         .catch(handleGetUserMediaError);
