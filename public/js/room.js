@@ -482,10 +482,11 @@ socket.on('video-answer', handleVideoAnswer);
 
 socket.on('join room', async (conc, cnames, micinfo, videoinfo) => {
 
-    let usernameList = [];
+    var usernameList = [];
     usernameList.push(cnames);
 
-    console.log("LOGS: 483: user list: " + usernameList);
+    console.log("LOGS: 483: user list: ");
+    console.log(usernameList);
 
     socket.emit('getCanvas');
     if (cnames)
