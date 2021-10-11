@@ -33,7 +33,7 @@ function addNewUserToAttendiesList(userId, userName) {
     var userElement = document.createElement("li");
     var liDiv = document.createElement("div");
     var liI = document.createElement("i");
-    userElement.id = userId;
+    userElement.id = userId + "-user";
     userElement.className ='attendies-list-li';
     liDiv.className ='attendies-list-li-div';
     liI.className ='fas fa-user mr-1';
@@ -45,7 +45,7 @@ function addNewUserToAttendiesList(userId, userName) {
 }
 
 function removeUserToAttendiesList(userId) {
-    var userElement = document.getElementById(userId);
+    var userElement = document.getElementById(userId + "-user");
     document.getElementById("attendies-list-id").removeChild(userElement);
 }
 
