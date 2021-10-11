@@ -282,7 +282,7 @@ navbar .logo {
   background: #555;
 }
 .container-room .left-cont {
-  width: 80%;
+  width: 100%;
   background-color: #393e46;
   height: 100vh;
   padding: 50px;
@@ -583,6 +583,43 @@ navbar .logo {
   color: white;
   background-color: #393e46;
 }
+
+.container-room .left-cont .footer .utils .participants {
+  background-color: #d8d8d8;
+  text-align: center;
+  margin-left: 10px;
+  color: #393e46;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+}
+.container-room .left-cont .footer .utils .participants:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #393e46;
+}
+
+.container-room .left-cont .footer .utils .chat-tooltip {
+  background-color: #d8d8d8;
+  text-align: center;
+  margin-left: 10px;
+  color: #393e46;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+}
+.container-room .left-cont .footer .utils .chat-tooltip:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #393e46;
+}
+
 .container-room .left-cont .footer .utils .board-icon {
   background-color: #d8d8d8;
   text-align: center;

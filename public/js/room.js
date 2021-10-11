@@ -2,6 +2,7 @@ const socket = io();
 const myvideo = document.querySelector("#vd1");
 const roomid = params.get("room");
 let username;
+let isRightContOpen = false;
 const chatRoom = document.querySelector('.chat-cont');
 const attendiesCont = document.querySelector('.attendies-cont');
 const sendButton = document.querySelector('.chat-send');
@@ -16,6 +17,8 @@ const videoButt = document.querySelector('.novideo');
 const audioButt = document.querySelector('.audio');
 const cutCall = document.querySelector('.cutcall');
 const screenShareButt = document.querySelector('.screenshare');
+const participantsWindowButt = document.querySelector('.participants');
+const chatWindowButt = document.querySelector('.chat-tooltip');
 const whiteboardButt = document.querySelector('.board-icon')
 
 var userList = [];
@@ -491,7 +494,25 @@ function handleVideoAnswer(answer, sid) {
     connections[sid].setRemoteDescription(ans);
 }
 
-//Thanks to (https://github.com/miroslavpejic85) for ScreenShare Code
+participantsWindowButt.addEventListener('click', () => {
+    rightContToggle();
+    attendiesButton.click();
+});
+
+chatWindowButt.addEventListener('click', () => {
+    rightContToggle();
+    chatButton.click();
+});
+
+function rightContToggle(){
+    isRightContOpen = !isRightContOpen;
+
+    if(isRightContOpen){
+        document.getElementsByClassName('right-cont').display = 'initial';
+    }else{
+        document.getElementsByClassName('right-cont').display = 'none';
+    }
+}
 
 screenShareButt.addEventListener('click', () => {
     screenShareToggle();
@@ -675,8 +696,8 @@ sendButton.addEventListener('click', () => {
 chatButton.addEventListener('click', () => {
     // attendiesCont.style.visibility = 'hidden';
     // chatRoom.style.visibility = 'visible';
-    attendiesCont.style.visibility = 'none';
-    chatRoom.style.visibility = 'inherit';
+    attendiesCont.style.display = 'none';
+    chatRoom.style.display = 'inherit';
 });
 
 attendiesButton.addEventListener('click', () => {
