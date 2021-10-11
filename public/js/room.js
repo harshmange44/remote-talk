@@ -28,12 +28,12 @@ function addNewUserToAttendiesList(userId, userName) {
     userElement.className ='attendies-list-li';
     var t = document.createTextNode(userName);
     userElement.appendChild(t);
-    document.getElementById("attendies-list").appendChild(userElement);
+    document.getElementsByClassName("attendies-list").appendChild(userElement);
 }
 
 function removeUserToAttendiesList(userId) {
     var userElement = document.getElementById(userId);
-    document.getElementById("attendies-list").removeChild(userElement);
+    document.getElementsByClassName("attendies-list").removeChild(userElement);
 }
 
 //whiteboard js start
