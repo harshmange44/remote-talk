@@ -376,7 +376,12 @@ function handleVideoOffer(offer, sid, cname, micinf, vidinf) {
 
     connections[sid].ontrack = function (event) {
 
+        console.log("LOGS: 417: ontrack called");
+
         if (!document.getElementById(sid)) {
+
+            console.log("LOGS: 417: get ele if entered");
+
             console.log('track event fired')
             let vidCont = document.createElement('div');
             let newvideo = document.createElement('video');
@@ -416,7 +421,7 @@ function handleVideoOffer(offer, sid, cname, micinf, vidinf) {
 
             videoContainer.appendChild(vidCont);
 
-            console.log("LOGS: 419: video of new user appended");
+            console.log("LOGS: 417: video of new user appended");
 
         }
 
