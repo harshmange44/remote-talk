@@ -20,11 +20,12 @@ const whiteboardButt = document.querySelector('.board-icon')
 
 var userList = [];
 
-attendiesCont.style.visibility = 'hidden';
+// attendiesCont.style.visibility = 'hidden';
 
 function addNewUserToAttendiesList(userId, userName) {
     var userElement = document.createElement("li");
     userElement.id = userId;
+    userElement.className ='attendies-list-li';
     var t = document.createTextNode(userName);
     userElement.appendChild(t);
     document.getElementById("attendies-list").appendChild(userElement);

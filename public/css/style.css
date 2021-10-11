@@ -708,11 +708,11 @@ navbar .logo {
 .container-room .right-cont .attendies-cont .attendies-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 /* Style the list items */
-.container-room .right-cont .attendies-cont .attendies-list li {
-  cursor: pointer;
+.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li {
   position: relative;
   padding: 12px 8px 12px 40px;
   background: #eee;
@@ -726,7 +726,7 @@ navbar .logo {
   user-select: none;
 }
 
-.container-room .right-cont .attendies-cont .attendies-list li:hover {
+.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li:hover {
   background: #ddd;
 }
 
