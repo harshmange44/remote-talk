@@ -49,6 +49,7 @@ io.on('connect', socket => {
         }
 
         io.to(roomid).emit('user count', rooms[roomid].length);
+        io.to(socketroom[socket.id]).emit('user added to the list', socket.id, username);
         io.to(roomid).emit('update user list', userList[roomid]);
 
     });
@@ -118,6 +119,7 @@ io.on('connect', socket => {
         userList[socketroom[socket.id]].splice(indexForUserList, 1);
 
         io.to(socketroom[socket.id]).emit('user count', rooms[socketroom[socket.id]].length);
+        io.to(socketroom[socket.id]).emit('user removed from the list', socket.id, userObjToRemove[socket.id]);
         io.to(socketroom[socket.id]).emit('update user list', userList[socketroom[socket.id]]);
 
         delete socketroom[socket.id];

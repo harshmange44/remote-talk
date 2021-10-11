@@ -3,7 +3,10 @@ const myvideo = document.querySelector("#vd1");
 const roomid = params.get("room");
 let username;
 const chatRoom = document.querySelector('.chat-cont');
+const attendiesCont = document.querySelector('.attendies-cont');
 const sendButton = document.querySelector('.chat-send');
+const chatButton = document.querySelector('.chats');
+const attendiesButton = document.querySelector('.attendies');
 const messageField = document.querySelector('.chat-input');
 const videoContainer = document.querySelector('#vcont');
 const overlayContainer = document.querySelector('#overlay')
@@ -14,6 +17,23 @@ const audioButt = document.querySelector('.audio');
 const cutCall = document.querySelector('.cutcall');
 const screenShareButt = document.querySelector('.screenshare');
 const whiteboardButt = document.querySelector('.board-icon')
+
+var userList = [];
+
+attendiesCont.style.visibility = 'hidden';
+
+function addNewUserToAttendiesList(userId, userName) {
+    var userElement = document.createElement("li");
+    userElement.id = userId;
+    var t = document.createTextNode(userName);
+    li.appendChild(t);
+    document.getElementById("attendies-list").appendChild(userElement);
+}
+
+function removeUserToAttendiesList(userId) {
+    var userElement = document.getElementById(userId);
+    document.getElementById("attendies-list").removeChild(userElement);
+}
 
 //whiteboard js start
 const whiteboardCont = document.querySelector('.whiteboard-cont');
@@ -221,10 +241,23 @@ socket.on('user count', count => {
     }
 })
 
-socket.on('update user list', userList => {
-    // var usernameList = [];
-    // usernameList.push(cnames);
+socket.on('user added to the list', (sId, userName) => {
+    const userObj = {};
+    userObj[sId] = userName;
+    userList.push(userObj);
 
+    addNewUserToAttendiesList(sId, userName);
+})
+socket.on('user removed from the list', (sId, userName) => {
+    const userObj = {};
+    userObj[sId] = userName;
+    var indexForUserList = userList.indexOf(userObj);
+    userList.splice(indexForUserList, 1);
+
+    removeUserToAttendiesList(sId);
+})
+
+socket.on('update user list', userList => {
     console.log("LOGS: 224: user list: "+ JSON.stringify(userList));
 })
 
@@ -605,6 +638,16 @@ sendButton.addEventListener('click', () => {
     messageField.value = '';
     socket.emit('message', msg, username, roomid);
 })
+
+chatButton.addEventListener('click', () => {
+    attendiesCont.style.visibility = 'hidden';
+    chatRoom.style.visibility = 'visible';
+});
+
+attendiesButton.addEventListener('click', () => {
+    chatRoom.style.visibility = 'hidden';
+    attendiesCont.style.visibility = 'visible';
+});
 
 messageField.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
