@@ -453,6 +453,18 @@ navbar .logo {
 .container-room .left-cont .whiteboard-cont .colors-cont .clearboard:hover {
   cursor: pointer;
 }
+
+.container-room .left-cont .whiteboard-cont .colors-cont .download-canvas {
+  height: 30px;
+  width: 30px;
+  font-size: 26px;
+  margin-right: 10px;
+  color: #2b2b2b;
+}
+.container-room .left-cont .whiteboard-cont .colors-cont .download-canvas:hover {
+  cursor: pointer;
+}
+
 .container-room .left-cont .video-cont {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -95,7 +95,7 @@ function setColor(newcolor) {
 
 function downloadCanvas(){
     var canvasLink = document.createElement('a');
-    canvasLink.download = 'filename.png';
+    canvasLink.download = 'remote-talk-canvas-' + moment().format("DD.MM.YYYY h:mm:s") + '.png';
     canvasLink.href = document.getElementById('whiteboard').toDataURL()
     canvasLink.click();
 }
