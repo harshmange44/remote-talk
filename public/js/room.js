@@ -26,7 +26,7 @@ function addNewUserToAttendiesList(userId, userName) {
     var userElement = document.createElement("li");
     userElement.id = userId;
     var t = document.createTextNode(userName);
-    li.appendChild(t);
+    userElement.appendChild(t);
     document.getElementById("attendies-list").appendChild(userElement);
 }
 
