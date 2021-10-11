@@ -642,13 +642,17 @@ sendButton.addEventListener('click', () => {
 })
 
 chatButton.addEventListener('click', () => {
-    attendiesCont.style.visibility = 'hidden';
-    chatRoom.style.visibility = 'visible';
+    // attendiesCont.style.visibility = 'hidden';
+    // chatRoom.style.visibility = 'visible';
+    attendiesCont.style.visibility = 'none';
+    chatRoom.style.visibility = 'inherit';
 });
 
 attendiesButton.addEventListener('click', () => {
-    chatRoom.style.visibility = 'hidden';
-    attendiesCont.style.visibility = 'visible';
+    // chatRoom.style.visibility = 'hidden';
+    // attendiesCont.style.visibility = 'visible';
+    chatRoom.style.display = 'none';
+    attendiesCont.style.display = 'inherit';
 });
 
 messageField.addEventListener("keyup", function (event) {
