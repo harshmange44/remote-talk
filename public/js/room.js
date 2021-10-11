@@ -201,8 +201,8 @@ let mystream, myscreenshare;
 document.querySelector('.roomcode').innerHTML = `${roomid}`
 
 function getRoomCode() {
-    var roomCode = document.querySelector('.roomcode');
-    return roomCode;
+    var roomCode = document.querySelector('.roomcode').textContent ;
+    return roomCode.toString();
 }
 
 function CopyClassText() {
