@@ -96,7 +96,7 @@ function setColor(newcolor) {
 function downloadCanvas(){
     var canvasLink = document.createElement('a');
     canvasLink.download = 'filename.png';
-    canvasLink.href = document.getElementById('canvas').toDataURL()
+    canvasLink.href = document.getElementById('whiteboard').toDataURL()
     canvasLink.click();
 }
 
