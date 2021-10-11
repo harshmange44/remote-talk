@@ -30,9 +30,13 @@ io.on('connect', socket => {
         micSocket[socket.id] = 'on';
         videoSocket[socket.id] = 'on';
 
+        let userObj = {};
+        userObj[socket.id] = username;
+
         if (rooms[roomid] && rooms[roomid].length > 0) {
             rooms[roomid].push(socket.id);
-            userList[roomid].push(username);
+            userList[roomid].push(userObj);
+            
             socket.to(roomid).emit('message', `${username} joined the room.`, 'Bot', moment().format(
                 "h:mm a"
             ));
@@ -40,7 +44,7 @@ io.on('connect', socket => {
         }
         else {
             rooms[roomid] = [socket.id];
-            userList[roomid] = [username];
+            userList[roomid] = [userObj];
             io.to(socket.id).emit('join room', null, null, null, null);
         }
 
@@ -105,8 +109,19 @@ io.on('connect', socket => {
         socket.to(socketroom[socket.id]).emit('remove peer', socket.id);
         var index = rooms[socketroom[socket.id]].indexOf(socket.id);
         rooms[socketroom[socket.id]].splice(index, 1);
+
+        var userObjToRemove = {};
+
+        userObjToRemove[socket.id] = socketname[socket.id];
+
+        var indexForUserList = userList[socketroom[socket.id]].indexOf(userObjToRemove);
+        userList[socketroom[socket.id]].splice(indexForUserList, 1);
+
         io.to(socketroom[socket.id]).emit('user count', rooms[socketroom[socket.id]].length);
+        io.to(socketroom[socket.id]).emit('update user list', userList[socketroom[socket.id]]);
+
         delete socketroom[socket.id];
+
         console.log('--------------------');
         console.log(rooms[socketroom[socket.id]]);
 

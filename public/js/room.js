@@ -226,7 +226,6 @@ socket.on('update user list', userList => {
     // usernameList.push(cnames);
 
     console.log("LOGS: 224: user list: "+userList);
-    console.log(userList);
 })
 
 let peerConnection;
