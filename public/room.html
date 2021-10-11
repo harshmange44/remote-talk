@@ -89,6 +89,12 @@
                     <div class="roomcode"></div>
                     <button class="copycode-button" onclick="CopyClassText()">Copy Code</button>
                 </div>
+                <div class="whatsapp-code-cont">
+                    <button class="copycode-button" 
+                    onclick="window.open('https://web.whatsapp.com://send?text=Remote Talk\n-------------Join a meeting by clicking the link below\n'+`${getRoomCode()}`)">
+                    <i class="fas fa-whats-app"></i>
+                </button>
+                </div>
             </div>
 
 

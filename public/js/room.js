@@ -200,6 +200,11 @@ let mystream, myscreenshare;
 
 document.querySelector('.roomcode').innerHTML = `${roomid}`
 
+function getRoomCode() {
+    var roomCode = document.querySelector('.roomcode');
+    return roomCode;
+}
+
 function CopyClassText() {
 
     var textToCopy = document.querySelector('.roomcode');
@@ -261,29 +266,6 @@ socket.on('user added to the list', (sId, userName) => {
     userList.push(userObj);
     
     console.log("LOGS 244: userList: "+JSON.stringify(userList));
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
-    addNewUserToAttendiesList(sId, userName);
     addNewUserToAttendiesList(sId, userName);
 
 })
