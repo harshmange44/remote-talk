@@ -12,6 +12,7 @@ const io = socketio(server);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+let userList = {};
 let rooms = {};
 let socketroom = {};
 let socketname = {};
@@ -31,6 +32,7 @@ io.on('connect', socket => {
 
         if (rooms[roomid] && rooms[roomid].length > 0) {
             rooms[roomid].push(socket.id);
+            userList[roomid].push(username);
             socket.to(roomid).emit('message', `${username} joined the room.`, 'Bot', moment().format(
                 "h:mm a"
             ));
@@ -38,11 +40,12 @@ io.on('connect', socket => {
         }
         else {
             rooms[roomid] = [socket.id];
+            userList[roomid] = [username];
             io.to(socket.id).emit('join room', null, null, null, null);
         }
 
         io.to(roomid).emit('user count', rooms[roomid].length);
-        io.to(roomid).emit('update user list', rooms[roomid]);
+        io.to(roomid).emit('update user list', userList[roomid]);
 
     });
 

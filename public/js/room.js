@@ -222,7 +222,11 @@ socket.on('user count', count => {
 })
 
 socket.on('update user list', userList => {
-    
+    // var usernameList = [];
+    // usernameList.push(cnames);
+
+    console.log("LOGS: 224: user list: "+userList);
+    console.log(userList);
 })
 
 let peerConnection;
@@ -481,12 +485,6 @@ socket.on('video-answer', handleVideoAnswer);
 
 
 socket.on('join room', async (conc, cnames, micinfo, videoinfo) => {
-
-    var usernameList = [];
-    usernameList.push(cnames);
-
-    console.log("LOGS: 483: user list: " + cnames);
-    console.log(usernameList);
 
     socket.emit('getCanvas');
     if (cnames)
