@@ -734,24 +734,15 @@ navbar .logo {
 .container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div {
   white-space: nowrap;
   overflow-y: scroll;
-}
-
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li:-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
-}
-/* Optional: show position indicator in red */
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li:-webkit-scrollbar-thumb {
-  background: #FF0000;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
 }
 
 .container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div:-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
+  width: 0;
+  height: 0;
+  display: none;
   background: transparent;  /* Optional: just make scrollbar invisible */
-}
-/* Optional: show position indicator in red */
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div:-webkit-scrollbar-thumb {
-  background: #FF0000;
 }
 
 .container-room .right-cont .chat-cont .message {

@@ -249,6 +249,18 @@ socket.on('user added to the list', (sId, userName) => {
     const userObj = {};
     userObj[sId] = userName;
     userList.push(userObj);
+    userList.push(userObj);
+    userList.push(userObj);
+    userList.push(userObj);
+    userList.push(userObj);
+    userList.push(userObj);
+    userList.push(userObj);
+    userList.push(userObj);
+    userList.push(userObj);
+    userList.push(userObj);userList.push(userObj);userList.push(userObj);userList.push(userObj);
+    userList.push(userObj);userList.push(userObj);userList.push(userObj);userList.push(userObj);
+    userList.push(userObj);userList.push(userObj);userList.push(userObj);userList.push(userObj);
+    userList.push(userObj);userList.push(userObj);userList.push(userObj);userList.push(userObj);
 
     console.log("LOGS 244: userList: "+JSON.stringify(userList));
     addNewUserToAttendiesList(sId, userName);
