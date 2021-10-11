@@ -5,6 +5,7 @@ let username;
 let isRightContOpen = false;
 const chatRoom = document.querySelector('.chat-cont');
 const attendiesCont = document.querySelector('.attendies-cont');
+const rightCont = document.getElementsByClassName('right-cont');
 const sendButton = document.querySelector('.chat-send');
 const chatButton = document.querySelector('.chats');
 const attendiesButton = document.querySelector('.attendies');
@@ -23,6 +24,7 @@ const whiteboardButt = document.querySelector('.board-icon')
 
 var userList = [];
 
+rightCont.style.display = 'none';
 attendiesCont.style.display = 'none';
 
 function addNewUserToAttendiesList(userId, userName) {
@@ -508,9 +510,9 @@ function rightContToggle(){
     isRightContOpen = !isRightContOpen;
 
     if(isRightContOpen){
-        document.getElementsByClassName('right-cont').display = 'initial';
+        rightCont.style.display = 'initial';
     }else{
-        document.getElementsByClassName('right-cont').display = 'none';
+        rightCont.style.display = 'none';
     }
 }
 
