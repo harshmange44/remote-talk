@@ -718,6 +718,7 @@ navbar .logo {
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
+  font-weight: bold;
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -728,6 +729,11 @@ navbar .logo {
 
 .container-room .right-cont .attendies-cont .attendies-list .attendies-list-li:hover {
   background: #ddd;
+}
+
+.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div {
+  white-space: nowrap;
+  overflow-y: scroll;
 }
 
 .container-room .right-cont .chat-cont .message {
