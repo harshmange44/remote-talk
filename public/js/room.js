@@ -246,6 +246,7 @@ socket.on('user added to the list', (sId, userName) => {
     userObj[sId] = userName;
     userList.push(userObj);
 
+    console.log("LOGS 244: userList: "+JSON.stringify(userList));
     addNewUserToAttendiesList(sId, userName);
 })
 socket.on('user removed from the list', (sId, userName) => {
@@ -254,6 +255,7 @@ socket.on('user removed from the list', (sId, userName) => {
     var indexForUserList = userList.indexOf(userObj);
     userList.splice(indexForUserList, 1);
 
+    console.log("LOGS 252: userList: "+JSON.stringify(userList));
     removeUserToAttendiesList(sId);
 })
 
