@@ -3,6 +3,7 @@ const myvideo = document.querySelector("#vd1");
 const roomid = params.get("room");
 let username;
 let isRightContOpen = false;
+let isFirstOpen = true;
 const chatRoom = document.querySelector('.chat-cont');
 const attendiesCont = document.querySelector('.attendies-cont');
 const rightCont = document.querySelector('.right-cont');
@@ -506,8 +507,15 @@ chatWindowButt.addEventListener('click', () => {
     chatButton.click();
 });
 
-function rightContToggle(){
-    isRightContOpen = !isRightContOpen;
+function rightContToggle(clickedBtn){
+    if(isFirstOpen){
+        isFirstOpen = false;
+        isRightContOpen = !isRightContOpen;
+    } else if(!isRightContOpen){
+        isRightContOpen = !isRightContOpen;
+    } else if(clickedBtn === lastClickedBtn && isRightContOpen){
+        isRightContOpen = !isRightContOpen;
+    }
 
     if(isRightContOpen){
         rightCont.style.display = 'initial';
