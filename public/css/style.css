@@ -714,11 +714,12 @@ navbar .logo {
 /* Style the list items */
 .container-room .right-cont .attendies-cont .attendies-list .attendies-list-li {
   position: relative;
-  padding: 12px 8px 12px 40px;
+  padding: 12px 8px 12px 20px;
   background: #eee;
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.2s;
   font-weight: bold;
+  margin-bottom: 8px;
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -736,6 +737,11 @@ navbar .logo {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;
+  color: #4a4a4a;
+}
+
+.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div i {
+  color: gray;
 }
 
 .container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div:-webkit-scrollbar {

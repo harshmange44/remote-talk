@@ -25,10 +25,13 @@ attendiesCont.style.display = 'none';
 function addNewUserToAttendiesList(userId, userName) {
     var userElement = document.createElement("li");
     var liDiv = document.createElement("div");
+    var liI = document.createElement("i");
     userElement.id = userId;
     userElement.className ='attendies-list-li';
     liDiv.className ='attendies-list-li-div';
+    liI.className ='fas fa-user mr-1';
     var t = document.createTextNode(userName);
+    liDiv.appendChild(liI);
     liDiv.appendChild(t);
     userElement.appendChild(liDiv);
     document.getElementById("attendies-list-id").appendChild(userElement);
