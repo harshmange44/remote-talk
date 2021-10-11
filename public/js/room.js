@@ -4,6 +4,7 @@ const roomid = params.get("room");
 let username;
 let isRightContOpen = false;
 let isFirstOpen = true;
+let lastClickedBtn = ""
 const chatRoom = document.querySelector('.chat-cont');
 const attendiesCont = document.querySelector('.attendies-cont');
 const rightCont = document.querySelector('.right-cont');
@@ -498,12 +499,12 @@ function handleVideoAnswer(answer, sid) {
 }
 
 participantsWindowButt.addEventListener('click', () => {
-    rightContToggle();
+    rightContToggle("participants");
     attendiesButton.click();
 });
 
 chatWindowButt.addEventListener('click', () => {
-    rightContToggle();
+    rightContToggle("chat");
     chatButton.click();
 });
 
@@ -513,10 +514,12 @@ function rightContToggle(clickedBtn){
         isRightContOpen = !isRightContOpen;
     } else if(!isRightContOpen){
         isRightContOpen = !isRightContOpen;
-    } else if(clickedBtn === lastClickedBtn && isRightContOpen){
+    } else if(clickedBtn === lastClickedBtn){
         isRightContOpen = !isRightContOpen;
     }
 
+    lastClickedBtn = clickedBtn;
+    
     if(isRightContOpen){
         rightCont.style.display = 'initial';
     }else{
