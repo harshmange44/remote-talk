@@ -93,6 +93,13 @@ function setColor(newcolor) {
     drawsize = 3;
 }
 
+function downloadCanvas(){
+    var canvasLink = document.createElement('a');
+    canvasLink.download = 'filename.png';
+    canvasLink.href = document.getElementById('canvas').toDataURL()
+    canvasLink.click();
+}
+
 function setEraser() {
     color = "white";
     drawsize = 10;

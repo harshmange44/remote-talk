@@ -305,17 +305,18 @@ navbar .logo {
 }
 .container-room .left-cont .whiteboard-cont .colors-cont {
   position: absolute;
-  right: 80px;
   top: 80px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  left: 50%;
+  margin-left: -100px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .black {
   height: 30px;
   width: 30px;
   border-radius: 50px;
   background-color: black;
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .black:hover {
   cursor: pointer;
@@ -325,7 +326,7 @@ navbar .logo {
   width: 30px;
   border-radius: 50px;
   background-color: #e74c3c;
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .red:hover {
   cursor: pointer;
@@ -335,7 +336,7 @@ navbar .logo {
   width: 30px;
   border-radius: 50px;
   background-color: #f1c40f;
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .yellow:hover {
   cursor: pointer;
@@ -345,7 +346,7 @@ navbar .logo {
   width: 30px;
   border-radius: 50px;
   background-color: #badc58;
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .green:hover {
   cursor: pointer;
@@ -355,7 +356,7 @@ navbar .logo {
   width: 30px;
   border-radius: 50px;
   background-color: #e67e22;
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .orange:hover {
   cursor: pointer;
@@ -365,7 +366,7 @@ navbar .logo {
   width: 30px;
   border-radius: 50px;
   background-color: #9b59b6;
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .purple:hover {
   cursor: pointer;
@@ -375,7 +376,7 @@ navbar .logo {
   width: 30px;
   border-radius: 50px;
   background-color: #3498db;
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .blue:hover {
   cursor: pointer;
@@ -385,7 +386,7 @@ navbar .logo {
   width: 30px;
   border-radius: 50px;
   background-color: #fd79a8;
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .pink:hover {
   cursor: pointer;
@@ -395,7 +396,7 @@ navbar .logo {
   width: 30px;
   border-radius: 50px;
   background-color: #834c32;
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .brown:hover {
   cursor: pointer;
@@ -405,16 +406,38 @@ navbar .logo {
   width: 30px;
   border-radius: 50px;
   background-color: gray;
-  margin-top: 10px;
+  margin-right: 10px;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .grey:hover {
+  cursor: pointer;
+}
+
+.container-room .left-cont .whiteboard-cont .colors-cont .maroon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background-color: #800000;
+  margin-right: 10px;
+}
+.container-room .left-cont .whiteboard-cont .colors-cont .maroon:hover {
+  cursor: pointer;
+}
+
+.container-room .left-cont .whiteboard-cont .colors-cont .aquamarine {
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background-color: #00FFFF;
+  margin-right: 10px;
+}
+.container-room .left-cont .whiteboard-cont .colors-cont .aquamarine:hover {
   cursor: pointer;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .eraser {
   height: 30px;
   width: 30px;
   font-size: 26px;
-  margin-top: 10px;
+  margin-right: 10px;
   color: #2b2b2b;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .eraser:hover {
@@ -424,7 +447,7 @@ navbar .logo {
   height: 30px;
   width: 30px;
   font-size: 26px;
-  margin-top: 10px;
+  margin-right: 10px;
   color: #2b2b2b;
 }
 .container-room .left-cont .whiteboard-cont .colors-cont .clearboard:hover {
