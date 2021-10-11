@@ -736,21 +736,21 @@ navbar .logo {
   overflow-y: scroll;
 }
 
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li ::-webkit-scrollbar {
+.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li:-webkit-scrollbar {
   width: 0;  /* Remove scrollbar space */
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li::-webkit-scrollbar-thumb {
+.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li:-webkit-scrollbar-thumb {
   background: #FF0000;
 }
 
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div ::-webkit-scrollbar {
+.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div:-webkit-scrollbar {
   width: 0;  /* Remove scrollbar space */
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div::-webkit-scrollbar-thumb {
+.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div:-webkit-scrollbar-thumb {
   background: #FF0000;
 }
 
