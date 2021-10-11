@@ -416,6 +416,8 @@ function handleVideoOffer(offer, sid, cname, micinf, vidinf) {
 
             videoContainer.appendChild(vidCont);
 
+            console.log("LOGS: 419: video of new user appended");
+
         }
 
 
@@ -519,7 +521,7 @@ function rightContToggle(clickedBtn){
     }
 
     lastClickedBtn = clickedBtn;
-    
+
     if(isRightContOpen){
         rightCont.style.display = 'initial';
     }else{
