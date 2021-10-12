@@ -1,3 +1,7 @@
+import EditorJS from '@editorjs/editorjs';
+import Header from '@editorjs/header'; 
+import List from '@editorjs/list'; 
+
 const socket = io();
 const myvideo = document.querySelector("#vd1");
 const roomid = params.get("room");
@@ -37,6 +41,13 @@ attendiesCont.style.display = 'none';
 
 var editor = new EditorJS({
     holderId: 'live-editor',
+    tools: { 
+        header: Header, 
+        list: {
+            class: List,
+            inlineToolbar: true,
+          },
+    },
     onReady: function(){
         console.log('ready saved');
       },
@@ -47,6 +58,14 @@ var editor = new EditorJS({
         });
     }
 });
+
+try {
+    await editor.isReady;
+    console.log('Editor.js is ready to work!')
+    /** Do anything you need after editor initialization */
+  } catch (reason) {
+    console.log(`Editor.js initialization failed because of ${reason}`)
+  }
 
 function addNewUserToAttendiesList(userId, userName) {
     var userElement = document.createElement("li");
