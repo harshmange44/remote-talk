@@ -223,7 +223,7 @@ function getRoomCode() {
 }
 
 function shareCodeOnWp(){
-    window.open('https://web.whatsapp.com/send?text=Remote Talk %0a-------------- %0aJoin a meeting by clicking the link below: %0ahttps://cryptic-hollows-22501.herokuapp.com/room.html?room=' + getRoomCode())
+    window.open('https://web.whatsapp.com/send?text=Remote Talk %0a-------------- %0aJoin a meeting by clicking the link below: %0ahttps://remote-talk.herokuapp.com/room.html?room=' + getRoomCode())
 }
 
 function CopyClassText() {
