@@ -303,6 +303,22 @@ navbar .logo {
   background-color: white;
   border-radius: 10px;
 }
+
+.container-room .left-cont .editor-cont {
+  height: 85vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 50px;
+  padding-bottom: 0;
+  min-height: 600px;
+}
+.container-room .left-cont .editor-cont #live-editor {
+  background-color: white;
+  border-radius: 10px;
+}
+
 .container-room .left-cont .whiteboard-cont .colors-cont {
   position: absolute;
   top: 80px;
@@ -672,6 +688,25 @@ navbar .logo {
   color: white;
   background-color: #393e46;
 }
+
+.container-room .left-cont .footer .utils .live-text-editor {
+  background-color: #d8d8d8;
+  text-align: center;
+  color: #393e46;
+  margin-left: 10px;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+}
+.container-room .left-cont .footer .utils .live-text-editor:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #393e46;
+}
+
 .container-room .left-cont .footer .utils .cutcall {
   background-color: #cc4e4e;
   text-align: center;
@@ -732,6 +767,7 @@ navbar .logo {
   border-radius: 100px;
   transition: background-color 0.3s;
   transition: color 0.3s;
+  align-self: center;
 }
 .container-room .left-cont .footer .copycode-cont .whatsapp-code:hover {
   cursor: pointer;

@@ -85,6 +85,10 @@ io.on('connect', socket => {
         ));
     })
 
+    socket.on('live-editor', (content, username, roomid) => {
+        io.to(roomid).emit('live-editor', content, username);
+    })
+
     socket.on('getCanvas', () => {
         if (roomBoard[socketroom[socket.id]])
             socket.emit('getCanvas', roomBoard[socketroom[socket.id]]);
@@ -104,7 +108,7 @@ io.on('connect', socket => {
 
     socket.on('disconnect', () => {
         if (!socketroom[socket.id]) return;
-        socket.to(socketroom[socket.id]).emit('message', `${socketname[socket.id]} left the chat.`, `Remote Talk`, moment().format(
+        socket.to(socketroom[socket.id]).emit('message', `${socketname[socket.id]} left the room.`, `Remote Talk`, moment().format(
             "h:mm a"
         ));
         socket.to(socketroom[socket.id]).emit('remove peer', socket.id);

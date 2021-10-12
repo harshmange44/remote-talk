@@ -12,6 +12,7 @@ const sendButton = document.querySelector('.chat-send');
 const chatButton = document.querySelector('.chats');
 const attendiesButton = document.querySelector('.attendies');
 const messageField = document.querySelector('.chat-input');
+const liveEditor = document.getElementById('live-editor');
 const videoContainer = document.querySelector('#vcont');
 const overlayContainer = document.querySelector('#overlay')
 const continueButt = document.querySelector('.continue-name');
@@ -730,6 +731,18 @@ socket.on('remove peer', sid => {
     delete connections[sid];
 })
 
+if (liveEditor.addEventListener) {
+    liveEditor.addEventListener('input', function() {
+    // event handling code for sane browsers
+    const content = liveEditor.value;
+    socket.emit('live-editor', content, username, roomid);
+  }, false);
+} else if (area.attachEvent) {
+  area.attachEvent('onpropertychange', function() {
+    // IE-specific event handling code
+  });
+}
+
 sendButton.addEventListener('click', () => {
     const msg = messageField.value;
     messageField.value = '';
@@ -768,6 +781,10 @@ socket.on('message', (msg, sendername, time) => {
         ${msg}
     </div>
 </div>`
+});
+
+socket.on('live-editor', (content, sendername) => {
+    liveEditor.value = content;
 });
 
 videoButt.addEventListener('click', () => {
