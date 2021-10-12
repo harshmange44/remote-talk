@@ -35,8 +35,6 @@ var userList = [];
 rightCont.style.display = 'none';
 attendiesCont.style.display = 'none';
 
-$('#live-editor').trumbowyg();
-
 function addNewUserToAttendiesList(userId, userName) {
     var userElement = document.createElement("li");
     var liDiv = document.createElement("div");
