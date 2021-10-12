@@ -25,7 +25,7 @@ const participantsWindowButt = document.querySelector('.participants');
 const chatWindowButt = document.querySelector('.chat-tooltip');
 const whiteboardButt = document.querySelector('.board-icon');
 const liveEditorCont = document.querySelector('.editor-cont');
-const liveEditorButt = document.querySelector('.board-icon');
+const liveEditorButt = document.querySelector('.live-text-editor');
 
 let liveEditorVisisble = false;
 liveEditorCont.style.visibility = 'hidden';
