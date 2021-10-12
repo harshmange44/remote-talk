@@ -134,7 +134,7 @@ navbar .logo {
 .main .create-join .joinroom {
   margin-top: 20px;
   width: 100%;
-  text-align: right;
+  text-align: center;
   font-size: 24px;
   font-weight: bold;
   color: #232931;
@@ -745,7 +745,7 @@ navbar .logo {
   background-color: #393e46;
 }
 
-.container-room .left-cont .footer .utils .cutcall {
+.container-room .left-cont .footer .utils .endcall {
   background-color: #cc4e4e;
   text-align: center;
   margin-left: 10px;
@@ -756,7 +756,7 @@ navbar .logo {
   border-radius: 100px;
   transition: background-color 0.3s;
 }
-.container-room .left-cont .footer .utils .cutcall:hover {
+.container-room .left-cont .footer .utils .endcall:hover {
   cursor: pointer;
   background-color: #393e46;
 }
@@ -842,7 +842,7 @@ navbar .logo {
   border-bottom: 2px solid #393e46;
 }
 .container-room .right-cont .head-title .chats,
-.container-room .right-cont .head-title .attendies {
+.container-room .right-cont .head-title .participants {
   padding: 10px;
   padding-top: 20px;
   width: 100%;
@@ -850,7 +850,7 @@ navbar .logo {
   transition: background-color 0.5s;
 }
 .container-room .right-cont .head-title .chats:hover,
-.container-room .right-cont .head-title .attendies:hover {
+.container-room .right-cont .head-title .participants:hover {
   background-color: #f8f8f8;
   cursor: pointer;
 }
@@ -861,7 +861,7 @@ navbar .logo {
   padding-top: 10px;
   overflow-y: scroll;
 }
-.container-room .right-cont .attendies-cont {
+.container-room .right-cont .participants-cont {
   background-color: #ffffff;
   height: 84vh;
   padding: 10px;
@@ -870,14 +870,14 @@ navbar .logo {
 }
 
 /* Remove margins and padding from the list */
-.container-room .right-cont .attendies-cont .attendies-list {
+.container-room .right-cont .participants-cont .participants-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 /* Style the list items */
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li {
+.container-room .right-cont .participants-cont .participants-list .participants-list-li {
   position: relative;
   padding: 12px 8px 12px 20px;
   background: #eee;
@@ -893,11 +893,11 @@ navbar .logo {
   user-select: none;
 }
 
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li:hover {
+.container-room .right-cont .participants-cont .participants-list .participants-list-li:hover {
   background: #ddd;
 }
 
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div {
+.container-room .right-cont .participants-cont .participants-list .participants-list-li-div {
   white-space: nowrap;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
@@ -905,12 +905,12 @@ navbar .logo {
   color: #4a4a4a;
 }
 
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div i {
+.container-room .right-cont .participants-cont .participants-list .participants-list-li-div i {
   color: gray;
   margin-right: 15px;
 }
 
-.container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div:-webkit-scrollbar {
+.container-room .right-cont .participants-cont .participants-list .participants-list-li-div:-webkit-scrollbar {
   width: 0;
   height: 0;
   display: none;

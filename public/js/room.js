@@ -6,11 +6,11 @@ let isRightContOpen = false;
 let isFirstOpen = true;
 let lastClickedBtn = ""
 const chatRoom = document.querySelector('.chat-cont');
-const attendiesCont = document.querySelector('.attendies-cont');
+const participantsCont = document.querySelector('.participants-cont');
 const rightCont = document.querySelector('.right-cont');
 const sendButton = document.querySelector('.chat-send');
 const chatButton = document.querySelector('.chats');
-const attendiesButton = document.querySelector('.attendies');
+const participantsButton = document.querySelector('.participants');
 const messageField = document.querySelector('.chat-input');
 const liveEditor = document.getElementById('live-editor');
 const videoContainer = document.querySelector('#vcont');
@@ -19,7 +19,7 @@ const continueButt = document.querySelector('.continue-name');
 const nameField = document.querySelector('#name-field');
 const videoButt = document.querySelector('.novideo');
 const audioButt = document.querySelector('.audio');
-const cutCall = document.querySelector('.cutcall');
+const endCall = document.querySelector('.endcall');
 const screenShareButt = document.querySelector('.screenshare');
 const participantsWindowButt = document.querySelector('.participants');
 const chatWindowButt = document.querySelector('.chat-tooltip');
@@ -34,26 +34,26 @@ liveEditorCont.style.visibility = 'hidden';
 var userList = [];
 
 rightCont.style.display = 'none';
-attendiesCont.style.display = 'none';
+participantsCont.style.display = 'none';
 
-function addNewUserToAttendiesList(userId, userName) {
+function addNewUserToParticipantsList(userId, userName) {
     var userElement = document.createElement("li");
     var liDiv = document.createElement("div");
     var liI = document.createElement("i");
     userElement.id = userId + "-user";
-    userElement.className ='attendies-list-li';
-    liDiv.className ='attendies-list-li-div';
+    userElement.className ='participants-list-li';
+    liDiv.className ='participants-list-li-div';
     liI.className ='fas fa-user mr-1';
     var t = document.createTextNode(userName);
     liDiv.appendChild(liI);
     liDiv.appendChild(t);
     userElement.appendChild(liDiv);
-    document.getElementById("attendies-list-id").appendChild(userElement);
+    document.getElementById("participants-list-id").appendChild(userElement);
 }
 
-function removeUserToAttendiesList(userId) {
+function removeUserToParticipantsList(userId) {
     var userElement = document.getElementById(userId + "-user");
-    document.getElementById("attendies-list-id").removeChild(userElement);
+    document.getElementById("participants-list-id").removeChild(userElement);
 }
 
 //whiteboard js start
@@ -293,7 +293,7 @@ socket.on('user added to the list', (sId, userName) => {
     userList.push(userObj);
     
     console.log("LOGS 244: userList: "+JSON.stringify(userList));
-    addNewUserToAttendiesList(sId, userName);
+    addNewUserToParticipantsList(sId, userName);
 
 })
 socket.on('user removed from the list', (sId, userName) => {
@@ -303,7 +303,7 @@ socket.on('user removed from the list', (sId, userName) => {
     userList.splice(indexForUserList, 1);
 
     console.log("LOGS 252: userList: "+JSON.stringify(userList));
-    removeUserToAttendiesList(sId);
+    removeUserToParticipantsList(sId);
 })
 
 socket.on('update user list', userList => {
@@ -516,7 +516,7 @@ function handleVideoAnswer(answer, sid) {
 
 participantsWindowButt.addEventListener('click', () => {
     rightContToggle("participants");
-    attendiesButton.click();
+    participantsButton.click();
 });
 
 chatWindowButt.addEventListener('click', () => {
@@ -756,17 +756,17 @@ sendButton.addEventListener('click', () => {
 })
 
 chatButton.addEventListener('click', () => {
-    // attendiesCont.style.visibility = 'hidden';
+    // participantsCont.style.visibility = 'hidden';
     // chatRoom.style.visibility = 'visible';
-    attendiesCont.style.display = 'none';
+    participantsCont.style.display = 'none';
     chatRoom.style.display = 'inherit';
 });
 
-attendiesButton.addEventListener('click', () => {
+participantsButton.addEventListener('click', () => {
     // chatRoom.style.visibility = 'hidden';
-    // attendiesCont.style.visibility = 'visible';
+    // participantsCont.style.visibility = 'visible';
     chatRoom.style.display = 'none';
-    attendiesCont.style.display = 'inherit';
+    participantsCont.style.display = 'inherit';
 });
 
 messageField.addEventListener("keyup", function (event) {
@@ -926,6 +926,6 @@ liveEditorCloseButt.addEventListener('click', () => {
     liveEditorButt.click();
 })
 
-cutCall.addEventListener('click', () => {
+endCall.addEventListener('click', () => {
     location.href = '/';
 })
