@@ -789,6 +789,7 @@ socket.on('message', (msg, sendername, time) => {
 });
 
 socket.on('live-editor', (content, username) => {
+    console.log("live-editor: " + userList[0].key);
     liveEditor.value = content;
 });
 
