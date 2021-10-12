@@ -221,6 +221,10 @@ function getRoomCode() {
     return roomCode.toString();
 }
 
+function shareCodeOnWp(){
+    window.open('https://web.whatsapp.com/send?text=Remote Talk\n--------------\nJoin a meeting by clicking the link below:\nhttps://cryptic-hollows-22501.herokuapp.com/room.html?room=' + getRoomCode())
+}
+
 function CopyClassText() {
 
     var textToCopy = document.querySelector('.roomcode');
