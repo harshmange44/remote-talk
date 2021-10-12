@@ -314,6 +314,13 @@ navbar .logo {
   padding-bottom: 0;
   min-height: 600px;
 }
+
+.container-room .left-cont .editor-cont .live-editor-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
 .container-room .left-cont .editor-cont #live-editor {
   background-color: white;
   border-radius: 10px;
