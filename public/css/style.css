@@ -733,6 +733,7 @@ navbar .logo {
   position: absolute;
   margin-left: 10px;
   padding: 10px;
+  cursor: pointer;
   height: 40px;
   width: 40px;
   display: inline;
@@ -843,7 +844,7 @@ navbar .logo {
   border-bottom: 2px solid #393e46;
 }
 .container-room .right-cont .head-title .chats,
-.container-room .right-cont .head-title .participants {
+.container-room .right-cont .head-title .participants-right-cont-switch {
   padding: 10px;
   padding-top: 20px;
   width: 100%;
@@ -851,7 +852,7 @@ navbar .logo {
   transition: background-color 0.5s;
 }
 .container-room .right-cont .head-title .chats:hover,
-.container-room .right-cont .head-title .participants:hover {
+.container-room .right-cont .head-title .participants-right-cont-switch:hover {
   background-color: #f8f8f8;
   cursor: pointer;
 }

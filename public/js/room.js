@@ -741,12 +741,12 @@ if (liveEditor.addEventListener) {
     liveEditor.addEventListener('input', function() {
     // event handling code for sane browsers
     const content = liveEditor.value;
-    socket.emit('live-editor', content, username, roomid);
+
+    setTimeout(function() {
+        socket.emit('live-editor', content, username, roomid);
+    }, 500);
+
   }, false);
-} else if (area.attachEvent) {
-  area.attachEvent('onpropertychange', function() {
-    // IE-specific event handling code
-  });
 }
 
 sendButton.addEventListener('click', () => {
