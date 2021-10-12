@@ -315,11 +315,16 @@ navbar .logo {
   min-height: 600px;
 }
 
+.container-room .left-cont .editor-cont .label-close-div {
+  display: flex;
+}
+
 .container-room .left-cont .editor-cont .live-editor-label {
   font-size: 30px;
   font-weight: 600;
   color: #fff;
   margin: 10px;
+  display: inline;
   font-family: 'Trocchi', serif;
 }
 
@@ -712,6 +717,25 @@ navbar .logo {
   transition: color 0.3s;
 }
 .container-room .left-cont .footer .utils .live-text-editor:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #393e46;
+}
+
+.container-room .left-cont .footer .utils .live-text-editor-close {
+  background-color: #d8d8d8;
+  text-align: center;
+  color: #393e46;
+  margin-left: 10px;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  display: inline;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+}
+.container-room .left-cont .footer .utils .live-text-editor-close:hover {
   cursor: pointer;
   color: white;
   background-color: #393e46;
