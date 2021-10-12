@@ -55,13 +55,6 @@ var editor = new EditorJS({
     }
 });
 
-try {
-    await editor.isReady;
-    console.log('Editor.js is ready to work!')
-    /** Do anything you need after editor initialization */
-  } catch (reason) {
-    console.log(`Editor.js initialization failed because of ${reason}`)
-  }
 
 function addNewUserToAttendiesList(userId, userName) {
     var userElement = document.createElement("li");
