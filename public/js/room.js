@@ -801,7 +801,7 @@ videoButt.addEventListener('click', () => {
         }
         videoButt.innerHTML = `<i class="fas fa-video-slash"></i>`;
         videoAllowed = 0;
-        videoButt.style.backgroundColor = "#6f9cf0";
+        videoButt.style.backgroundColor = "#cc4e4e";
 
         if (mystream) {
             mystream.getTracks().forEach(track => {
@@ -845,7 +845,7 @@ audioButt.addEventListener('click', () => {
         }
         audioButt.innerHTML = `<i class="fas fa-microphone-slash"></i>`;
         audioAllowed = 0;
-        audioButt.style.backgroundColor = "#6f9cf0";
+        audioButt.style.backgroundColor = "#cc4e4e";
         if (mystream) {
             mystream.getTracks().forEach(track => {
                 if (track.kind === 'audio')
