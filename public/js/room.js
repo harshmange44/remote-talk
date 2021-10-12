@@ -556,36 +556,20 @@ function screenShareToggle() {
     let screenMediaPromise;
     if (!screenshareEnabled) {
         if (navigator.getDisplayMedia) {
-            screenMediaPromise = navigator.getDisplayMedia({ video: true, audio: {
-                echoCancellation: true,
-                noiseSuppression: true, // not required
-                sampleRate: 44100 // not required
-            }, cursor: true });
+            screenMediaPromise = navigator.getDisplayMedia({ video: true, cursor: true });
         } else if (navigator.mediaDevices.getDisplayMedia) {
-            screenMediaPromise = navigator.mediaDevices.getDisplayMedia({ video: true, audio: {
-                echoCancellation: true,
-                noiseSuppression: true, // not required
-                sampleRate: 44100 // not required
-            }, cursor: true });
+            screenMediaPromise = navigator.mediaDevices.getDisplayMedia({ video: true, cursor: true });
         } else {
             screenMediaPromise = navigator.mediaDevices.getUserMedia({
                 video: { mediaSource: "screen" },
-                audio: {
-                    echoCancellation: true,
-                    noiseSuppression: true, // not required
-                    sampleRate: 44100 // not required
-                }, 
                 cursor: true
             });
         }
     } else {
-        screenMediaPromise = navigator.mediaDevices.getUserMedia({ video: true, 
-            audio: {
-            echoCancellation: true,
-            noiseSuppression: true, // not required
-            sampleRate: 44100 // not required
-        }, 
-        cursor: true });
+        screenMediaPromise = navigator.mediaDevices.getUserMedia({ 
+            video: true,
+            cursor: true 
+        });
     }
     screenMediaPromise
         .then((myscreenshare) => {
