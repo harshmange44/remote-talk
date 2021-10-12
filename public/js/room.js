@@ -1,7 +1,3 @@
-import EditorJS from '@editorjs/editorjs';
-import Header from '@editorjs/header'; 
-import List from '@editorjs/list'; 
-
 const socket = io();
 const myvideo = document.querySelector("#vd1");
 const roomid = params.get("room");
