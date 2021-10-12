@@ -60,12 +60,12 @@ navbar .logo {
   margin-right: 50px;
 }
 .main .create-join .text .head {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
   color: #393e46;
 }
 .main .create-join .text .subtext {
-  font-size: 24px;
+  font-size: 20px;
   color: #6f6f6f;
   margin-top: 10px;
 }
@@ -1029,7 +1029,7 @@ navbar .logo {
 /* ------------------------- footer css -----------------------*/
 
 .site-footer {
-  background-color: #838383;
+  background-color: #fff;
 	text-align: center;
 	margin: 10px 0;
 	padding: 10px 0;
@@ -1059,8 +1059,8 @@ navbar .logo {
 	margin-top: .625em;
 	width: 40px;
 	height: 40px;
-	opacity: .6;
-	filter: alpha(opacity=60); /* For IE8 and earlier */
+	opacity: .9;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
   border-radius: 25px;
 }
 
