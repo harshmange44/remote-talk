@@ -692,9 +692,9 @@ if (liveEditor.addEventListener) {
     liveEditor.addEventListener('input', function() {
     const content = liveEditor.value;
 
-    // setTimeout(function() {
+    setTimeout(function() {
         socket.emit('live-editor', content, hostUserId, username, roomid);
-    // }, 500);
+    }, 100);
 
   }, false);
 }
