@@ -582,9 +582,12 @@ function screenShareToggle() {
             }
             myscreenshare.getVideoTracks()[0].enabled = true;
             const newStream = new MediaStream([
-                myscreenshare.getVideoTracks()[0],
-                myscreenshare.getAudioTracks()[0]
+                myscreenshare.getVideoTracks()[0]
             ]);
+
+            const audioTracks = myscreenshare.getAudioTracks()
+            newStream.addTrack(audioTracks[0]);
+
             myvideo.srcObject = newStream;
             myvideo.muted = true;
             mystream = newStream;
