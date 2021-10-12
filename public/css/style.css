@@ -720,6 +720,25 @@ navbar .logo {
 .container-room .left-cont .footer .copycode-cont .copycode-button:focus {
   outline: none;
 }
+
+.container-room .left-cont .footer .whatsapp-code {
+  background-color: #d8d8d8;
+  text-align: center;
+  margin-left: 10px;
+  color: #393e46;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+}
+.container-room .left-cont .footer .whatsapp-code:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #393e46;
+}
+
 .container-room .right-cont {
   width: 30%;
   background-color: #ffffff;
