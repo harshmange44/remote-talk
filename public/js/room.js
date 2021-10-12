@@ -5,6 +5,8 @@ let username;
 let isRightContOpen = false;
 let isFirstOpen = true;
 let lastClickedBtn = ""
+let hostUser = false;
+let hostUserId;
 const chatRoom = document.querySelector('.chat-cont');
 const participantsCont = document.querySelector('.participants-cont');
 const rightCont = document.querySelector('.right-cont');
@@ -288,6 +290,12 @@ socket.on('user count', count => {
 })
 
 socket.on('user added to the list', (sId, userName) => {
+    
+    if(!hostUser){
+        hostUser = true;
+        hostUserId = sId;
+    }
+
     const userObj = {};
     userObj[sId] = userName;
     userList.push(userObj);
@@ -742,7 +750,7 @@ if (liveEditor.addEventListener) {
     const content = liveEditor.value;
 
     // setTimeout(function() {
-        socket.emit('live-editor', content, username, roomid);
+        socket.emit('live-editor', content, hostUserId, username, roomid);
     // }, 500);
 
   }, false);
@@ -788,9 +796,10 @@ socket.on('message', (msg, sendername, time) => {
 </div>`
 });
 
-socket.on('live-editor', (content, username) => {
-    console.log("live-editor: " + userList[0].key);
-    liveEditor.value = content;
+socket.on('live-editor', (content, userId, username) => {
+    if(userId != hostUserId){
+        liveEditor.value = content;
+    }
 });
 
 videoButt.addEventListener('click', () => {

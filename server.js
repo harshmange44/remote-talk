@@ -85,10 +85,10 @@ io.on('connect', socket => {
         ));
     })
 
-    socket.on('live-editor', (content, username, roomid) => {
+    socket.on('live-editor', (content, hostUserId, username, roomid) => {
         setTimeout(function() {
-            io.to(roomid).emit('live-editor', content, username);
-        }, 500);
+            io.to(roomid).emit('live-editor', content, hostUserId, username);
+        }, 100);
     })
 
     socket.on('getCanvas', () => {
