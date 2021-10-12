@@ -37,6 +37,9 @@ attendiesCont.style.display = 'none';
 
 var editor = new EditorJS({
     holderId: 'live-editor',
+    onReady: function(){
+        console.log('ready saved');
+      },
     onChange: function() {
         console.log('something changed');
         editor.save().then((savedData) => {
