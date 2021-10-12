@@ -319,6 +319,7 @@ navbar .logo {
   display: flex;
   align-items: center;
   position: relative;
+  justify-content: center;
 }
 
 .container-room .left-cont .editor-cont .live-editor-label {

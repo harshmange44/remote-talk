@@ -10,7 +10,7 @@ const participantsCont = document.querySelector('.participants-cont');
 const rightCont = document.querySelector('.right-cont');
 const sendButton = document.querySelector('.chat-send');
 const chatButton = document.querySelector('.chats');
-const participantsButton = document.querySelector('.participants');
+const participantsButton = document.querySelector('.participants-right-cont-switch');
 const messageField = document.querySelector('.chat-input');
 const liveEditor = document.getElementById('live-editor');
 const videoContainer = document.querySelector('#vcont');
@@ -28,7 +28,7 @@ const liveEditorCont = document.querySelector('.editor-cont');
 const liveEditorButt = document.querySelector('.live-text-editor');
 const liveEditorCloseButt = document.querySelector('.live-text-editor-close');
 
-let liveEditorVisisble = false;
+let liveEditorVisible = false;
 liveEditorCont.style.visibility = 'hidden';
 
 var userList = [];
@@ -801,7 +801,7 @@ videoButt.addEventListener('click', () => {
         }
         videoButt.innerHTML = `<i class="fas fa-video-slash"></i>`;
         videoAllowed = 0;
-        videoButt.style.backgroundColor = "#b12c2c";
+        videoButt.style.backgroundColor = "#6f9cf0";
 
         if (mystream) {
             mystream.getTracks().forEach(track => {
@@ -845,7 +845,7 @@ audioButt.addEventListener('click', () => {
         }
         audioButt.innerHTML = `<i class="fas fa-microphone-slash"></i>`;
         audioAllowed = 0;
-        audioButt.style.backgroundColor = "#b12c2c";
+        audioButt.style.backgroundColor = "#6f9cf0";
         if (mystream) {
             mystream.getTracks().forEach(track => {
                 if (track.kind === 'audio')
@@ -901,6 +901,10 @@ socket.on('action', (msg, sid) => {
 })
 
 whiteboardButt.addEventListener('click', () => {
+    if(liveEditorVisible){
+        liveEditorButt.click();
+    }
+
     if (boardVisisble) {
         whiteboardCont.style.visibility = 'hidden';
         boardVisisble = false;
@@ -912,13 +916,18 @@ whiteboardButt.addEventListener('click', () => {
 })
 
 liveEditorButt.addEventListener('click', () => {
-    if (liveEditorVisisble) {
+
+    if(boardVisisble)
+        whiteboardButt.click();
+    }
+
+    if (liveEditorVisible) {
         liveEditorCont.style.visibility = 'hidden';
-        liveEditorVisisble = false;
+        liveEditorVisible = false;
     }
     else {
         liveEditorCont.style.visibility = 'visible';
-        liveEditorVisisble = true;
+        liveEditorVisible = true;
     }
 })
 
