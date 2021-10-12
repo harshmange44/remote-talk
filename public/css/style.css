@@ -1049,13 +1049,11 @@ navbar .logo {
 	margin: 0 5px;
 }
 
-.twitter-icon,
-.facebook-icon,
-.instagram-icon,
-.linkedin-icon,
-.googleplus-icon,
-.youtube-icon,
-.foursquare-icon{
+.github-icon,
+.insta-icon,
+.linked-in-icon,
+.email-icon,
+.dev-site-icon{
 	margin-top: .625em;
 	width: 40px;
 	height: 40px;
