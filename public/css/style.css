@@ -722,7 +722,7 @@ navbar .logo {
   background-color: #393e46;
 }
 
-.container-room .left-cont .footer .utils .live-text-editor-close {
+.container-room .left-cont .editor-cont .label-close-div .live-text-editor-close {
   background-color: #d8d8d8;
   text-align: center;
   color: #393e46;
