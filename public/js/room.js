@@ -193,7 +193,16 @@ mymuteicon.style.visibility = 'hidden';
 let myvideooff = document.querySelector("#myvideooff");
 myvideooff.style.visibility = 'hidden';
 
-const configuration = { iceServers: [{ urls: "stun:stun.stunprotocol.org" }] }
+const configuration = { 
+    iceServers: [
+        { urls: "stun:stun.stunprotocol.org" }, 
+        { urls: 'stun:stun.l.google.com:19302' },
+        { urls: 'stun:stun1.l.google.com:19302' },
+        { urls: 'stun:stun2.l.google.com:19302' },
+        { urls: 'stun:stun3.l.google.com:19302' },
+        { urls: 'stun:stun4.l.google.com:19302' }
+    ]
+ }
 
 const mediaConstraints = { video: true, audio: true };
 
@@ -531,17 +540,36 @@ function screenShareToggle() {
     let screenMediaPromise;
     if (!screenshareEnabled) {
         if (navigator.getDisplayMedia) {
-            screenMediaPromise = navigator.getDisplayMedia({ video: true, audio:true });
+            screenMediaPromise = navigator.getDisplayMedia({ video: true, audio: {
+                echoCancellation: true,
+                noiseSuppression: true, // not required
+                sampleRate: 44100 // not required
+            }, cursor: true });
         } else if (navigator.mediaDevices.getDisplayMedia) {
-            screenMediaPromise = navigator.mediaDevices.getDisplayMedia({ video: true, audio:true });
+            screenMediaPromise = navigator.mediaDevices.getDisplayMedia({ video: true, audio: {
+                echoCancellation: true,
+                noiseSuppression: true, // not required
+                sampleRate: 44100 // not required
+            }, cursor: true });
         } else {
             screenMediaPromise = navigator.mediaDevices.getUserMedia({
                 video: { mediaSource: "screen" },
-                audio:true
+                audio: {
+                    echoCancellation: true,
+                    noiseSuppression: true, // not required
+                    sampleRate: 44100 // not required
+                }, 
+                cursor: true
             });
         }
     } else {
-        screenMediaPromise = navigator.mediaDevices.getUserMedia({ video: true, audio:true });
+        screenMediaPromise = navigator.mediaDevices.getUserMedia({ video: true, 
+            audio: {
+            echoCancellation: true,
+            noiseSuppression: true, // not required
+            sampleRate: 44100 // not required
+        }, 
+        cursor: true });
     }
     screenMediaPromise
         .then((myscreenshare) => {
