@@ -43,7 +43,7 @@ body {
 
 navbar .logo {
   font-size: 28px;
-  color: #393e46;
+  color: #6f9cf0;
   font-weight: bold;
   padding: 0 12%;
   margin-top: 32px;
@@ -74,19 +74,19 @@ navbar .logo {
   margin-top: 60px;
   font-size: 24px;
   font-weight: bold;
-  background-color: #4ecca3;
+  background-color: #6f9cf0;
   color: white;
   text-align: center;
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
-  border: 2px solid #4ecca3;
+  border: 2px solid #6f9cf0;
   transition: 0.3s;
 }
 .main .create-join .createroom-butt:hover {
   background-color: white;
-  border: 2px solid #4ecca3;
-  color: #4ecca3;
+  border: 2px solid #6f9cf0;
+  color: #6f9cf0;
   cursor: pointer;
 }
 .main .create-join .createroom-butt:focus {
@@ -102,8 +102,8 @@ navbar .logo {
   border: none;
   border-radius: 10px;
   background-color: white;
-  border: 2px solid #4ecca3;
-  color: #4ecca3;
+  border: 2px solid #6f9cf0;
+  color: #6f9cf0;
 }
 .main .create-join .createroom-clicked:focus {
   outline: none;
@@ -161,7 +161,7 @@ navbar .logo {
   width: 100px;
 }
 .main .video-cont .settings .device {
-  background-color: #4ecca3;
+  background-color: #6f9cf0;
   border-radius: 100px;
   padding: 10px;
   width: 40px;
@@ -233,7 +233,7 @@ navbar .logo {
   font-weight: bold;
   padding: 10px;
   width: 90%;
-  border-bottom: 3px solid #4ecca3;
+  border-bottom: 3px solid #6f9cf0;
   color: #393e46;
   height: 40px;
 }
@@ -246,7 +246,7 @@ navbar .logo {
   margin-top: 30px;
   color: #ffffff;
   font-weight: bold;
-  background-color: #4ecca3;
+  background-color: #6f9cf0;
   padding: 12px 20px;
   border-radius: 10px;
   transition: opacity 0.5s;
@@ -606,7 +606,7 @@ navbar .logo {
   justify-content: center;
 }
 .container-room .left-cont .footer .utils .audio {
-  background-color: #4ecca3;
+  background-color: #6f9cf0;
   text-align: center;
   color: white;
   padding: 10px;
@@ -620,7 +620,7 @@ navbar .logo {
   background-color: #393e46;
 }
 .container-room .left-cont .footer .utils .novideo {
-  background-color: #4ecca3;
+  background-color: #6f9cf0;
   text-align: center;
   margin-left: 10px;
   color: white;
@@ -767,10 +767,10 @@ navbar .logo {
   display: flex;
 }
 .container-room .left-cont .footer .copycode-cont .roomcode {
-  color: #4ecca3;
+  color: #6f9cf0;
   padding: 10px 20px;
   background-color: white;
-  border-bottom: 3px solid #4ecca3;
+  border-bottom: 3px solid #6f9cf0;
   font-weight: bold;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -780,7 +780,7 @@ navbar .logo {
   width: 100px;
   text-align: center;
   color: white;
-  background-color: #4ecca3;
+  background-color: #6f9cf0;
   border: none;
   font-weight: bold;
   outline: none;
@@ -961,7 +961,7 @@ navbar .logo {
   font-size: 0.85rem;
   padding: 4px 10px;
   border: none;
-  border-bottom: 3px solid #4ecca3;
+  border-bottom: 3px solid #6f9cf0;
   color: #393e46;
 }
 .container-room .right-cont .chat-input-cont .chat-input:focus {
@@ -972,7 +972,7 @@ navbar .logo {
   padding: 5px 20px;
   border: none;
   background-color: white;
-  color: #4ecca3;
+  color: #6f9cf0;
   font-weight: bold;
   font-size: 0.85rem;
   border-radius: 2px;
