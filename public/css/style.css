@@ -316,9 +316,11 @@ navbar .logo {
 }
 
 .container-room .left-cont .editor-cont .live-editor-label {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 600;
-  color: #333;
+  color: #fff;
+  margin: 10px;
+  font-family: 'Trocchi', serif;
 }
 
 .container-room .left-cont .editor-cont #live-editor {
