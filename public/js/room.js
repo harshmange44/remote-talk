@@ -739,12 +739,11 @@ socket.on('remove peer', sid => {
 
 if (liveEditor.addEventListener) {
     liveEditor.addEventListener('input', function() {
-    // event handling code for sane browsers
     const content = liveEditor.value;
 
-    setTimeout(function() {
+    // setTimeout(function() {
         socket.emit('live-editor', content, username, roomid);
-    }, 500);
+    // }, 500);
 
   }, false);
 }
@@ -789,7 +788,7 @@ socket.on('message', (msg, sendername, time) => {
 </div>`
 });
 
-socket.on('live-editor', (content, sendername) => {
+socket.on('live-editor', (content, username) => {
     liveEditor.value = content;
 });
 
