@@ -585,11 +585,8 @@ function screenShareToggle() {
                 myscreenshare.getVideoTracks()[0]
             ]);
 
-            const audioTracks = myscreenshare.getAudioTracks()
-            newStream.addTrack(audioTracks[0]);
-
             myvideo.srcObject = newStream;
-            myvideo.muted = true;
+            myvideo.muted = false;
             mystream = newStream;
             screenShareButt.innerHTML = (screenshareEnabled
                 ? `<i class="fas fa-desktop"></i><span class="tooltiptext">Stop Share Screen</span>`
