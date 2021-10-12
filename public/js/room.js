@@ -917,7 +917,7 @@ whiteboardButt.addEventListener('click', () => {
 
 liveEditorButt.addEventListener('click', () => {
 
-    if(boardVisisble)
+    if(boardVisisble){
         whiteboardButt.click();
     }
 
@@ -929,7 +929,7 @@ liveEditorButt.addEventListener('click', () => {
         liveEditorCont.style.visibility = 'visible';
         liveEditorVisible = true;
     }
-})
+});
 
 liveEditorCloseButt.addEventListener('click', () => {
     liveEditorButt.click();
