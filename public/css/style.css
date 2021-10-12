@@ -1042,6 +1042,7 @@ navbar .logo {
 /*Social Media Icons*/
 .social-wrapper {
 	text-align: center;
+  font-size: 25px;
 }
 
 .social-wrapper ul li {
@@ -1054,6 +1055,7 @@ navbar .logo {
 .linked-in-icon,
 .email-icon,
 .dev-site-icon{
+  color: rgb(26, 26, 26);
 	margin-top: .625em;
 	width: 40px;
 	height: 40px;
