@@ -531,16 +531,17 @@ function screenShareToggle() {
     let screenMediaPromise;
     if (!screenshareEnabled) {
         if (navigator.getDisplayMedia) {
-            screenMediaPromise = navigator.getDisplayMedia({ video: true });
+            screenMediaPromise = navigator.getDisplayMedia({ video: true, audio:true });
         } else if (navigator.mediaDevices.getDisplayMedia) {
-            screenMediaPromise = navigator.mediaDevices.getDisplayMedia({ video: true });
+            screenMediaPromise = navigator.mediaDevices.getDisplayMedia({ video: true, audio:true });
         } else {
             screenMediaPromise = navigator.mediaDevices.getUserMedia({
                 video: { mediaSource: "screen" },
+                audio:true
             });
         }
     } else {
-        screenMediaPromise = navigator.mediaDevices.getUserMedia({ video: true });
+        screenMediaPromise = navigator.mediaDevices.getUserMedia({ video: true, audio:true });
     }
     screenMediaPromise
         .then((myscreenshare) => {
