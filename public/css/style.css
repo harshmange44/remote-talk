@@ -721,7 +721,7 @@ navbar .logo {
   outline: none;
 }
 
-.container-room .left-cont .footer .whatsapp-code {
+.container-room .left-cont .footer .copycode-cont .whatsapp-code {
   background-color: #d8d8d8;
   text-align: center;
   margin-left: 10px;
@@ -733,7 +733,7 @@ navbar .logo {
   transition: background-color 0.3s;
   transition: color 0.3s;
 }
-.container-room .left-cont .footer .whatsapp-code:hover {
+.container-room .left-cont .footer .copycode-cont .whatsapp-code:hover {
   cursor: pointer;
   color: white;
   background-color: #393e46;
