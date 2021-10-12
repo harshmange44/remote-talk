@@ -15,7 +15,6 @@
     "moment": "^2.27.0",
     "nodemon": "^2.0.4",
     "socket.io": "^2.3.0",
-    "trumbowyg": "^2.25.1",
     "uuid": "^8.3.0",
     "webrtc-adapter": "^7.7.0"
   },

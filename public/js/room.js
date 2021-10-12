@@ -35,6 +35,16 @@ var userList = [];
 rightCont.style.display = 'none';
 attendiesCont.style.display = 'none';
 
+var editor = new EditorJS({
+    holderId: 'live-editor',
+    onChange: function() {
+        console.log('something changed');
+        editor.save().then((savedData) => {
+            console.log("savedData: "+savedData);
+        });
+    }
+});
+
 function addNewUserToAttendiesList(userId, userName) {
     var userElement = document.createElement("li");
     var liDiv = document.createElement("div");
