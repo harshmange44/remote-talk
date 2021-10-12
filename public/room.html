@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="trumbowyg/dist/ui/trumbowyg.min.css">
     <script src="https://kit.fontawesome.com/6510466b6c.js" crossorigin="anonymous"></script>
     <script>
         const params = new URLSearchParams(location.search);
@@ -141,10 +142,17 @@
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+    <-- Import Trumbowyg -->
+    <script src="trumbowyg/dist/trumbowyg.min.js"></script>
+
+    <-- Import Trumbowyg plugins... -->
+    <script src="trumbowyg/dist/plugins/upload/trumbowyg.cleanpaste.min.js"></script>
+    <script src="trumbowyg/dist/plugins/upload/trumbowyg.pasteimage.min.js"></script>
+
     <script>
         $('#live-editor').trumbowyg();
     </script>
-    
+
     <script src="/socket.io/socket.io.js"></script>
     <!-- <script src="js/whiteboard.js"></script> -->
     <script src="js/room.js"></script>
