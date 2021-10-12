@@ -310,13 +310,14 @@ navbar .logo {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 50px;
+  padding: 20px;
   padding-bottom: 0;
   min-height: 600px;
 }
 .container-room .left-cont .editor-cont #live-editor {
   background-color: white;
   border-radius: 10px;
+  padding: 20px;
 }
 
 .container-room .left-cont .whiteboard-cont .colors-cont {
@@ -582,7 +583,7 @@ navbar .logo {
   margin: 0 auto;
   display: flex;
   margin-top: 50px;
-  width: 370px;
+  width: 425px;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 10px;

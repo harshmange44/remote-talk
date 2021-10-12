@@ -23,12 +23,19 @@ const cutCall = document.querySelector('.cutcall');
 const screenShareButt = document.querySelector('.screenshare');
 const participantsWindowButt = document.querySelector('.participants');
 const chatWindowButt = document.querySelector('.chat-tooltip');
-const whiteboardButt = document.querySelector('.board-icon')
+const whiteboardButt = document.querySelector('.board-icon');
+const liveEditorCont = document.querySelector('.editor-cont');
+const liveEditorButt = document.querySelector('.board-icon');
+
+let liveEditorVisisble = false;
+liveEditorCont.style.visibility = 'hidden';
 
 var userList = [];
 
 rightCont.style.display = 'none';
 attendiesCont.style.display = 'none';
+
+$('#live-editor').trumbowyg();
 
 function addNewUserToAttendiesList(userId, userName) {
     var userElement = document.createElement("li");
@@ -902,6 +909,17 @@ whiteboardButt.addEventListener('click', () => {
     else {
         whiteboardCont.style.visibility = 'visible';
         boardVisisble = true;
+    }
+})
+
+liveEditorButt.addEventListener('click', () => {
+    if (liveEditorVisisble) {
+        liveEditorCont.style.visibility = 'hidden';
+        liveEditorVisisble = false;
+    }
+    else {
+        liveEditorCont.style.visibility = 'visible';
+        liveEditorVisisble = true;
     }
 })
 
