@@ -52,7 +52,7 @@ navbar .logo {
 .main {
   display: flex;
   padding: 0 12%;
-  margin-top: 20vh;
+  margin-top: 10vh;
   width: 100%;
 }
 .main .create-join {
@@ -317,6 +317,8 @@ navbar .logo {
 
 .container-room .left-cont .editor-cont .label-close-div {
   display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .container-room .left-cont .editor-cont .live-editor-label {
@@ -599,7 +601,7 @@ navbar .logo {
   margin-top: 50px;
   width: 425px;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 10px;
   justify-content: center;
 }
@@ -723,9 +725,11 @@ navbar .logo {
 }
 
 .container-room .left-cont .editor-cont .label-close-div .live-text-editor-close {
-  background-color: #d8d8d8;
+  background-color: #e4e4e4;
   text-align: center;
-  color: #393e46;
+  color: #f13030;
+  right: 12%;
+  position: absolute;
   margin-left: 10px;
   padding: 10px;
   height: 40px;
@@ -903,6 +907,7 @@ navbar .logo {
 
 .container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div i {
   color: gray;
+  margin-right: 15px;
 }
 
 .container-room .right-cont .attendies-cont .attendies-list .attendies-list-li-div:-webkit-scrollbar {
@@ -1019,6 +1024,59 @@ navbar .logo {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 0.8;
+}
+
+/* ------------------------- footer css -----------------------*/
+
+.site-footer {
+  background-color: #838383;
+	text-align: center;
+	margin: 10px 0;
+	padding: 10px 0;
+}
+
+#social-wrapper {
+	text-align: center;
+}
+
+/*Social Media Icons*/
+.social-wrapper {
+	text-align: center;
+}
+
+.social-wrapper ul li {
+	display: inline;
+	margin: 0 5px;
+}
+
+.twitter-icon,
+.facebook-icon,
+.instagram-icon,
+.linkedin-icon,
+.googleplus-icon,
+.youtube-icon,
+.foursquare-icon{
+	margin-top: .625em;
+	width: 40px;
+	height: 40px;
+	opacity: .6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
+  border-radius: 25px;
+}
+
+.twitter-icon:hover,
+.facebook-icon:hover,
+.instagram-icon:hover,
+.linkedin-icon:hover,
+.googleplus-icon:hover,
+.youtube-icon:hover,
+.foursquare-icon:hover {
+	opacity: 1.0;
+	filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.footer-nav p {
+	text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

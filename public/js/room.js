@@ -26,6 +26,7 @@ const chatWindowButt = document.querySelector('.chat-tooltip');
 const whiteboardButt = document.querySelector('.board-icon');
 const liveEditorCont = document.querySelector('.editor-cont');
 const liveEditorButt = document.querySelector('.live-text-editor');
+const liveEditorCloseButt = document.querySelector('.live-text-editor-close');
 
 let liveEditorVisisble = false;
 liveEditorCont.style.visibility = 'hidden';
@@ -919,6 +920,10 @@ liveEditorButt.addEventListener('click', () => {
         liveEditorCont.style.visibility = 'visible';
         liveEditorVisisble = true;
     }
+})
+
+liveEditorCloseButt.addEventListener('click', () => {
+    liveEditorButt.click();
 })
 
 cutCall.addEventListener('click', () => {
