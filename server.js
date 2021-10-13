@@ -37,7 +37,7 @@ io.on('connect', socket => {
             rooms[roomid].push(socket.id);
             userList[roomid].push(userObj);
             
-            socket.to(roomid).emit('message', `${username} joined the room.`, 'Remote Talk', moment().utcOffset("+05:30").format(
+            socket.to(roomid).emit('message', `${username} joined the room.`, 'Remote Talk', moment().utc().local().format(
                 "h:mm a"
             ));
             io.to(socket.id).emit('join room', rooms[roomid].filter(pid => pid != socket.id), socketname, micSocket, videoSocket);
@@ -80,7 +80,7 @@ io.on('connect', socket => {
     })
 
     socket.on('message', (msg, username, roomid) => {
-        io.to(roomid).emit('message', msg, username, moment().utcOffset("+05:30").format(
+        io.to(roomid).emit('message', msg, username, moment().utc().local().format(
             "h:mm a"
         ));
     })
@@ -110,7 +110,7 @@ io.on('connect', socket => {
 
     socket.on('disconnect', () => {
         if (!socketroom[socket.id]) return;
-        socket.to(socketroom[socket.id]).emit('message', `${socketname[socket.id]} left the room.`, `Remote Talk`, moment().utcOffset("+05:30").format(
+        socket.to(socketroom[socket.id]).emit('message', `${socketname[socket.id]} left the room.`, `Remote Talk`, moment().utc().local().format(
             "h:mm a"
         ));
         socket.to(socketroom[socket.id]).emit('remove peer', socket.id);
