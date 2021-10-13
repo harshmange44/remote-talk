@@ -7,7 +7,6 @@ let isFirstOpen = true;
 let lastClickedBtn = ""
 let hostUser = false;
 let hostUserId;
-let showTimeIntervalDur = 1;
 const chatRoom = document.querySelector('.chat-cont');
 const participantsCont = document.querySelector('.participants-cont');
 const rightCont = document.querySelector('.right-cont');
@@ -52,11 +51,9 @@ function showTime() {
 
     var time = h + ":" + min + " " + ampm;
     timeSpan.innerText = `${time}`;
-
-    showTimeIntervalDur = 60000;
   }
   
-  setInterval(showTime, showTimeIntervalDur);
+  setInterval(showTime, 500);
 
   
 function addNewUserToParticipantsList(userId, userName) {
