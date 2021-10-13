@@ -38,6 +38,24 @@ var userList = [];
 rightCont.style.display = 'none';
 participantsCont.style.display = 'none';
 
+function showTime() {
+    var timeSpan = document.getElementById("time-display-span");
+  
+    var date = new Date();
+   
+    var hour = date.getHours();
+    var min = date.getMinutes();
+  
+    var h = hour % 12 || 12;
+    var ampm = (hour < 12 || hour === 24) ? "AM" : "PM";
+
+    var time = h + ":" + min + " " + ampm;
+    timeSpan.innerText = `${time}`;
+  }
+  
+  setInterval(showTime, 60000);
+
+  
 function addNewUserToParticipantsList(userId, userName) {
     var userElement = document.createElement("li");
     var liDiv = document.createElement("div");

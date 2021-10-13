@@ -595,6 +595,20 @@ navbar .logo {
 .container-room .left-cont .footer {
   position: relative;
 }
+
+.container-room .left-cont .footer .time-display-div{
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  display: flex;
+  background: #b7b7b7;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
 .container-room .left-cont .footer .utils {
   text-align: center;
   margin: 0 auto;
