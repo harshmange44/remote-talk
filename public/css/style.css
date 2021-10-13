@@ -117,19 +117,28 @@ navbar .logo {
   padding: 10px 0;
   border: none;
   border-bottom: 3px solid #232931;
-  border-top: 2px solid white;
+  border-top: 2px solid rgb(80, 80, 80);
+  border-left: 2px solid rgb(80, 80, 80);
+  border-right: 2px solid rgb(80, 80, 80);
   font-weight: bold;
+  border-radius: 5px;
 }
 .main .create-join .roomcode:focus {
   background-color: white;
   border: 0;
   border-bottom: 3px solid #232931;
+  border-top: 2px solid #232931;
+  border-left: 2px solid #232931;
+  border-right: 2px solid #232931;
   border-top: 2px solid white;
   outline: none;
   border-radius: 0;
 }
 .main .create-join .roomcode-error {
   border-bottom: 3px solid #d31c1c;
+  border-top: 2px solid #d31c1c;
+  border-left: 2px solid #d31c1c;
+  border-right: 2px solid #d31c1c;
 }
 .main .create-join .joinroom {
   margin-top: 20px;
