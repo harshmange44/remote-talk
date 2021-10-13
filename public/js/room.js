@@ -10,7 +10,7 @@ let hostUserId;
 const chatRoom = document.querySelector('.chat-cont');
 const participantsCont = document.querySelector('.participants-cont');
 const rightCont = document.querySelector('.right-cont');
-const sendButton = document.querySelector('.chat-send');
+const sendButton = document.getElementsByClassName('.chat-send');
 const chatButton = document.querySelector('.chats');
 const participantsButton = document.querySelector('.participants-right-cont-switch');
 const messageField = document.querySelector('.chat-input');
@@ -251,7 +251,7 @@ function CopyClassText() {
 
     document.querySelector(".copycode-button").textContent = "Copied!"
     setTimeout(()=>{
-        document.querySelector(".copycode-button").textContent = "Copy Code";
+        document.querySelector(".copycode-button").textContent = "";
     }, 5000);
 }
 

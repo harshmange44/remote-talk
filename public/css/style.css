@@ -45,13 +45,13 @@ navbar .logo {
   font-size: 28px;
   color: #6f9cf0;
   font-weight: bold;
-  padding: 0 12%;
+  padding: 0 7%;
   margin-top: 32px;
 }
 
 .main {
   display: flex;
-  padding: 0 12%;
+  padding: 0 7%;
   margin-top: 10vh;
   width: 100%;
 }
@@ -72,7 +72,7 @@ navbar .logo {
 .main .create-join .createroom-butt {
   width: 100%;
   margin-top: 60px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   background-color: #6f9cf0;
   color: white;
@@ -111,7 +111,7 @@ navbar .logo {
 .main .create-join .roomcode {
   width: 100%;
   margin-top: 30px;
-  font-size: 24px;
+  font-size: 18px;
   color: #393e46;
   text-align: center;
   padding: 10px 0;
@@ -135,7 +135,7 @@ navbar .logo {
   margin-top: 20px;
   width: 100%;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   color: #232931;
 }
@@ -772,13 +772,13 @@ navbar .logo {
   color: #6f9cf0;
   padding: 10px 20px;
   background-color: white;
-  border-bottom: 3px solid #6f9cf0;
+  border-left: 3px solid #6f9cf0;
   font-weight: bold;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 .container-room .left-cont .footer .copycode-cont .copycode-button {
-  padding: 10px 0;
+  padding: 12px 15px;
   width: 100px;
   text-align: center;
   color: white;
@@ -837,11 +837,11 @@ navbar .logo {
 }
 .container-room .right-cont .head-title {
   font-weight: bold;
-  color: #393e46;
+  color: #777;
   background-color: #ffffff;
   width: 100%;
   display: flex;
-  border-bottom: 2px solid #393e46;
+  border-bottom: 2px solid #777;
 }
 .container-room .right-cont .head-title .chats,
 .container-room .right-cont .head-title .participants-right-cont-switch {
@@ -883,7 +883,7 @@ navbar .logo {
   position: relative;
   padding: 12px 8px 12px 20px;
   background: #eee;
-  font-size: 16px;
+  font-size: 14px;
   transition: 0.2s;
   font-weight: bold;
   margin-bottom: 8px;
@@ -955,7 +955,6 @@ navbar .logo {
 }
 .container-room .right-cont .chat-input-cont .ci-send {
   width: 20%;
-  margin-left: 20px;
 }
 .container-room .right-cont .chat-input-cont .chat-input {
   width: 100%;
@@ -971,12 +970,12 @@ navbar .logo {
 }
 .container-room .right-cont .chat-input-cont .chat-send {
   height: 36px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   border: none;
   background-color: white;
   color: #6f9cf0;
   font-weight: bold;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   border-radius: 2px;
   transition: background-color 0.5s;
 }
