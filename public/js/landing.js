@@ -22,12 +22,12 @@ function uuidv4() {
     });
 }
 
-const createroomtext = 'Creating Room...';
+const createroomtext = 'Creating Meeting...';
 
 createButton.addEventListener('click', (e) => {
     e.preventDefault();
     createButton.disabled = true;
-    createButton.innerHTML = 'Creating Room';
+    createButton.innerHTML = 'Creating Meeting';
     createButton.classList = 'createroom-clicked';
 
     setInterval(() => {
