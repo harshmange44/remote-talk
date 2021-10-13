@@ -10,7 +10,7 @@ let hostUserId;
 const chatRoom = document.querySelector('.chat-cont');
 const participantsCont = document.querySelector('.participants-cont');
 const rightCont = document.querySelector('.right-cont');
-const sendButton = document.getElementsByClassName('.chat-send');
+const sendButton = document.getElementsByClassName('chat-send');
 const chatButton = document.querySelector('.chats');
 const participantsButton = document.querySelector('.participants-right-cont-switch');
 const messageField = document.querySelector('.chat-input');
