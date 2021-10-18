@@ -623,10 +623,11 @@ navbar .logo {
   display: flex;
   margin-top: 50px;
   width: 425px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   border-radius: 30px;
   padding: 10px;
   justify-content: center;
+  background: transparent;
 }
 .container-room .left-cont .footer .utils .audio {
   background-color: #6f9cf0;
